@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="./CSS/register.css">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1>Addaduma Ent.</h1>
+            <img src="./multimedia/logo.png" loading="lazy" alt="logo here">
+            <p>Adventure our new products with ease</p>
+        </div>
+        <div class="form-container">
+            <h1>Register </h1>
+            <form method="post">
+                <div class="form-field">
+                    <div class="box">
+                        <label for="name">First Name:</label>
+                        <div class="field">
+                            <input type="text" placeholder="First Name" name="name" id="name" required>
+                            <i class="bx bx-user"></i>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <label for="name">Last Name:</label>
+                        <div class="field">
+                            <input type="text" placeholder="Last Name" name="name" id="name" required>
+                            <i class="bx bx-user"></i>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <label for="name">Email:</label>
+                        <div class="field">
+                            <input type="text" placeholder="example@gmail.com" name="name" id="name" required>
+                            <i class="bx bx-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label for="name">Phone Number:</label>
+                        <div class="field">
+                            <input type="number" maxlength="10" placeholder="1234567890" name="phoneNumber" id="phoneNumber" required>
+                            <i class="bx bx-phone"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label for="name">Country::</label>
+                        <div class="field">
+                            <input type="text" placeholder="Country" name="Country" id="Country" required>
+                            <i class="bx bx-phone"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <div class="box">
+                        <label for="name">Town:</label>
+                        <div class="field">
+                            <input type="text" placeholder="Town" name="Town" id="Town">
+                            <i class="bx bx-buildings"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label for="name">Street or Address</label>
+                        <div class="field">
+                            <input type="text" placeholder="Street" name="Address" id="Address">
+                           <i class="bx bx-location"></i>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <label for="name">Password</label>
+                        <div class="field">
+                            <input type="password" placeholder="Password" name="password" id="password" required>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label for="name">Confirm Password</label>
+                        <div class="field">
+                            <input type="password" placeholder="Confirm password" name="password" id="password" required>
+                            <i class="bx bx-eye-slash"></i>
+                        </div>
+                    </div>
+                    <button class="signUpBtn" id="signUpBtn" type="submit">Sign Up</button>
+                </div>
+            </form>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
