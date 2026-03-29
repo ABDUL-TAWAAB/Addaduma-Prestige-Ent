@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up</title>
     <link rel="stylesheet" href="./CSS/register.css">
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <!-- Basic Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+<!-- Filled Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+<!-- Brand Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -16,7 +21,7 @@
         </div>
         <div class="form-container">
             <h1>Register </h1>
-            <form method="post">
+            <form id="registerForm">
                 <div class="form-field">
                     <div class="box">
                         <label for="name">First Name:</label>
@@ -37,7 +42,7 @@
                     <div class="box">
                         <label for="name">Email:</label>
                         <div class="field">
-                            <input type="text" placeholder="example@gmail.com" name="name" id="name" required>
+                            <input type="text" placeholder="example@gmail.com" name="email" id="email" required>
                             <i class="bx bx-envelope"></i>
                         </div>
                     </div>
@@ -77,20 +82,25 @@
                         <label for="name">Password</label>
                         <div class="field">
                             <input type="password" placeholder="Password" name="password" id="password" required>
+                            <i id="eyeCloseEl" class="bx bx-eye-slash"></i>
+                            <i id="eyeOpenEl" class="bx bx-eye-alt"></i>
                         </div>
                     </div>
                     <div class="box">
                         <label for="name">Confirm Password</label>
                         <div class="field">
-                            <input type="password" placeholder="Confirm password" name="password" id="password" required>
-                            <i class="bx bx-eye-slash"></i>
+                            <input type="password" placeholder="Confirm password" name="password" id="confirmPassword" required>
+                            <i id="eyeOpenEl" class="bx bx-eye-slash"></i>
                         </div>
                     </div>
                     <button class="signUpBtn" id="signUpBtn" type="submit">Sign Up</button>
                 </div>
             </form>
             <p>Already have an account? <a href="login.html">Login</a></p>
+            <p class="message"></p>
         </div>
     </div>
+
+    <script src="./js/register.js" defer></script>
 </body>
 </html>

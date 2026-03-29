@@ -48,7 +48,7 @@ form h1{
 .form-field{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     width: 65%;
     height: 50%;
 }
@@ -67,13 +67,21 @@ form h1{
     border-radius:8px;
 }
 
+.message{
+    margin-top: 5px;
+}
+
 label{
     font-size: 19px;
     font-weight: bold;
 }
 
 .input-box i{
-    font-size: 25px;
+    font-size: 20px;
+}
+
+#eyeOpenEl{
+    display: none;
 }
 
 .input-box input{

@@ -17,7 +17,7 @@ body{
 }
 
 .container{
-    width: 80%;
+    width: 90%;
     height: 90vh;
     display: flex;
     justify-content: space-around;
@@ -74,9 +74,12 @@ body{
 }
 
 .field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 300px;
     height: 35px;
-    padding: 8px 0 8px 0;
+    padding: 8px 5px 8px 5px;
     border: 1px solid;
     border-radius: 8px;
     box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
@@ -91,12 +94,16 @@ body{
 }
 
 .field input{
-    width: 88%;
+    width: 80%;
     font-size: 16px;
     padding-left: 10px;
     height: 100%;
     border: none;
     outline: none;
+}
+
+#eyeOpenEl{
+    display: none;
 }
 .field input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button{
     -webkit-appearance: none;

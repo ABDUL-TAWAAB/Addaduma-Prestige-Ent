@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addaduma Prestige Enterprise</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <!-- Basic Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+<!-- Filled Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+<!-- Brand Icons -->
+<link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,7 +21,7 @@
            </div>
             <ul id="navLinks">
                 <li><a href="#home">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a id="contactEl" href="#">Contact</a></li>
                 <li><a href="#product-page">Product</a></li>
                 <d iv class="cart-box">
                     <i class="bx bx-cart-alt"></i>
@@ -26,8 +31,9 @@
 
             <div class="logins">
                 <i id="menuBar" class="bx bx-menu"></i>    
-                <i class="bx bx-user"></i>
-                <a href="login.html">Login</a>
+                <i id="profile-icon" class="bx bx-user"></i>
+                <a href="#" id="loginEl">Login</a>
+                <i id="logout-icon" class="bx bx-arrow-out-right-square-half"></i>
             </div>
         </nav>
     </header>

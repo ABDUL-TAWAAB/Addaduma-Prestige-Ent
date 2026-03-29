@@ -279,4 +279,46 @@ navitems.forEach((item) => {
     })
 } );
 
+
+// show user name when logged in
+let loginEl = document.getElementById('loginEl');
+let profileIcon = document.getElementById('profile-icon');
+let contactEl  = document.getElementById('contactEl');
+let logOutIcon = document.getElementById('logout-icon');
+
+
+
+let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if(currentUser){
+        loginEl.innerHTML = currentUser.name // show user name in login
+        profileIcon.style.display = "none" // disable the profile icon
+        loginEl.style.color = "red"
+
+        contactEl.addEventListener('click', () => {
+            setTimeout(() => {
+                window.location.href = "contact.html"
+            }, 2500)
+        })
+
+
+        logOutIcon.addEventListener('click', () => {
+            localStorage.removeItem('currentUser');
+            location.reload();
+        })
+    }else{
+        logOutIcon.style.display = 'none';
+        contactEl.addEventListener('click', () => {
+            alert('Please Login to continue')
+
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 1500)
+        })
+
+        loginEl.addEventListener('click', () => {
+            window.location.href = 'login.html'
+        })
+    }
+
+
     
