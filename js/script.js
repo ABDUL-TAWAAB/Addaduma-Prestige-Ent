@@ -1,6 +1,6 @@
 const product = [
     {
-        id : 1,
+        id : 0,
         name: "Can-Malt",
         image: "../multimedia/products/can-malt.jpg",
         size: "250ml",
@@ -8,7 +8,7 @@ const product = [
         recomended: true 
     },
     {
-        id : 2,
+        id : 1,
         name: "Can-fanta",
         image: "../multimedia/products/can-fanta.jpg",
         size: "250ml",
@@ -16,7 +16,7 @@ const product = [
         recomended: false
     },
     {
-        id : 3,
+        id : 2,
         name: "Guinness Malta",
         image: "../multimedia/products/bottled-malta-guinness.jpg",
         size: "500ml",
@@ -32,7 +32,7 @@ const product = [
         recomended: true 
     },
     {
-        id : 5,
+        id : 4,
         name: "Sprite",
         image: "../multimedia/products/can-sprite.jpg",
         size: "350ml",
@@ -40,7 +40,7 @@ const product = [
         recomended: true 
     },
     {
-        id : 6,
+        id : 5,
         name: "Coca-Cola",
         image: "../multimedia/products/can-coca-cola.jpg",
         size: "250ml",
@@ -48,7 +48,7 @@ const product = [
         recomended: false
     },
     {
-        id : 7,
+        id : 6,
         name: "Fanta",
         image: "../multimedia/products/fanta.jpg",
         size: "500ml",
@@ -56,7 +56,7 @@ const product = [
         recomended: true 
     },
     {
-        id : 8,
+        id : 7,
         name: "Smirnoff",
         image: "../multimedia/products/smirnoff.jpg",
         size: "350ml",
@@ -64,7 +64,7 @@ const product = [
         recomended: false
     },
     {
-        id : 9,
+        id : 8,
         name: "Vittel Water",
         image: "../multimedia/products/vittel-mineral-water.jpg",
         size: "500ml",
@@ -72,12 +72,20 @@ const product = [
         recomended: true 
     },
     {
-        id : 10,
+        id : 9,
         name: "Cola",
         image: "../multimedia/products/coca-cola.jpg",
         size: "250ml",
         price: 150,
         recomended: true 
+    },
+    {
+        id : 10,
+        name: "Can-Malt",
+        image: "../multimedia/products/can-malt.jpg",
+        size: "250ml",
+        price: 150,
+        recomended: false
     },
     {
         id : 11,
@@ -120,39 +128,31 @@ const product = [
         recomended: false
     },
     {
-        id : 15,
-        name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
-        size: "250ml",
-        price: 150,
-        recomended: false
-    },
-    {
-        id : 15,
-        name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
-        size: "250ml",
-        price: 150,
-        recomended: false
-    },
-    {
-        id : 15,
-        name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
-        size: "250ml",
-        price: 150,
-        recomended: false
-    },
-    {
-        id : 15,
-        name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
-        size: "250ml",
-        price: 150,
-        recomended: false
-    },
-    {
         id : 16,
+        name: "Can-Malt",
+        image: "../multimedia/products/can-malt.jpg",
+        size: "250ml",
+        price: 150,
+        recomended: false
+    },
+    {
+        id : 17,
+        name: "Can-Malt",
+        image: "../multimedia/products/can-malt.jpg",
+        size: "250ml",
+        price: 150,
+        recomended: false
+    },
+    {
+        id : 18,
+        name: "Can-Malt",
+        image: "../multimedia/products/can-malt.jpg",
+        size: "250ml",
+        price: 150,
+        recomended: false
+    },
+    {
+        id : 19,
         name: "Can-Malt",
         image: "../multimedia/products/can-malt.jpg",
         size: "250ml",
@@ -169,7 +169,7 @@ productEl = product.map(data => {
     const card = document.createElement("div")
     card.classList.add('product-card')
     card.innerHTML=`
-    <img src=${data.image} alt=${data.name} loadin="lazy" />
+    <img src=${data.image} alt=${data.name} loading="lazy" />
         <div class="product-details">
             <h4>${data.name}</h4>
             <div class="description">
@@ -183,7 +183,7 @@ productEl = product.map(data => {
                     <input  min="1" class="qty-value" type="number" value="0" />
                     <button class="increase">+</button>
                 </div>
-                    <i class="bx bx-cart-alt"></i>
+                    <i id="addToCart" class="bx bx-cart-alt"></i>
             </div>
         </div>
     `;
@@ -219,8 +219,14 @@ productEl = product.map(data => {
 
         return{name: productEl.name, price: productEl.price, element: productEl.card}
 
+    })
 
-})
+    //cart functionality
+    
+    
+
+
+    
  
 
 // filter recomended products
@@ -318,7 +324,24 @@ let currentUser = JSON.parse(localStorage.getItem('currentUser'));
         loginEl.addEventListener('click', () => {
             window.location.href = 'login.html'
         })
+
+        profileIcon.addEventListener('click', () => {
+            window.location.href = 'login.html';
+        })
     }
+
+
+
+
+    
+
+
+
+
+
+
+
+    
 
 
     

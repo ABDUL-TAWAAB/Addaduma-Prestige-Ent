@@ -71,6 +71,9 @@ nav ul{
     flex-direction: column;
     justify-content: space-around;
     padding: 50px 0 50px 0;
+    border-bottom: 2px solid #652410;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
    }
 
     nav ul.show{
@@ -188,11 +191,19 @@ main .contact-us-hero-box{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 30px;
+    @media screen and (max-width:1024px) {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 100px;
+    }
 }
 
 .form-box{
     width: 50%;
     height: auto;
+    @media screen and (max-width:1024px) {
+        width: 90%;
+    }
 }
 
 .form-box h4{
@@ -214,17 +225,33 @@ main .contact-us-hero-box{
     margin-top: 30px;
 }
 
+form{
+    @media screen and (max-width:1024px) {
+        width: 100%;
+    }
+}
+
 form .name-and-email-box{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width:1024px) {
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 20px;
+        gap: 20px;
+    }
 }
 
 .field{
     width: 300px;
     border-radius: 10px;
     box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+    @media screen and (max-width:1024px) {
+        width: 100%;
+        box-shadow: unset;
+    }
 }
 
 .field .input-field{
@@ -238,6 +265,9 @@ form .name-and-email-box{
     border: 1px solid;
     border-radius: 8px;
      background-color: rgb(231, 227, 227);
+      @media screen and (max-width:1024px) {
+        width: 90%;
+    }
 }
 
 .input-field input{
@@ -256,6 +286,10 @@ form .name-and-email-box{
     width: 100%;
     height: 45px;
     margin-top: 20px;
+    @media screen and (max-width:1024px) {
+        width: 90%;
+        padding-bottom: 20px;
+    }
 }
 
 .subject-field .input-field{
@@ -282,6 +316,9 @@ form .name-and-email-box{
     border-radius: 10px;
     box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
     background-color: rgb(231, 227, 227);
+    @media screen and (max-width:1024px) {
+        width: 85%;
+    }
 }
 
 
@@ -320,7 +357,7 @@ form .name-and-email-box{
 }
 
 
-/*=============cont info =============*/
+/*=============contact info =============*/
 
 .contact-info-container{
     background-color: #652410;
@@ -330,7 +367,11 @@ form .name-and-email-box{
     gap: 20px;
     align-items: center;
     padding: 15px;
-    border-radius: 10px;;
+    border-radius: 10px;
+     @media screen and (max-width:1024px) {
+        width: 80%;
+       margin-top: 20px;
+    }
 }
 
 .address, .contact, .open-time, .media-handles{
@@ -401,6 +442,10 @@ form .name-and-email-box{
 }
 
 
+
+
+
+/* ==================Footer ============ */
 footer{
     width: 100%;
     height: auto;
@@ -411,13 +456,18 @@ footer{
     justify-content: center;
 }
 .join-us{
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #000000;
     padding: 50px;
     border-radius: 0 0 10px 10px;
+    @media screen and (max-width:1024px) {
+        height: auto;
+        gap: 20px;
+        flex-direction: column;
+    }
 
 }
 
@@ -431,6 +481,10 @@ footer{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     padding-right: 50px;
+     @media screen and (max-width:1024px) {
+        text-align: center;
+        padding: unset;
+    }
 }
 
 .join-us .sub-box{
@@ -481,6 +535,17 @@ footer{
     justify-content: center;
     display: flex;
     align-items: center;
+     @media screen and (max-width:1024px) {
+        width: 95%;
+        height: fit-content;
+        margin-bottom: 20px;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+.footer-logo h1{
+    font-size: 26px;
 }
 
 .useful-links{
@@ -490,6 +555,10 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+     @media screen and (max-width:1024px) {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .useful-links .links{
@@ -497,10 +566,15 @@ footer{
         flex-direction: column;
         align-items:flex-start;
         gap: 10px;
+        @media screen and (max-width:1024px) {
+        text-align: center;
+        align-items: center;
+    }
 }
 
 .links h1{
     font-size: 25px;
+    color: #652410;
 }
 .links li{
     list-style: none;

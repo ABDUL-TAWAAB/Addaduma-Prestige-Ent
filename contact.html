@@ -13,6 +13,20 @@
 <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
 <!-- Brand Icons -->
 <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+
+
+
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "anRwygmOYp4dwUTmM",
+      });
+   })();
+</script>
 </head>
 <body>
     <header>
@@ -24,7 +38,7 @@
             <ul id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a id="contactEl" href="#">Contact</a></li>
-                <li><a href="#product-page">Product</a></li>
+                <li><a href="index.html">Product</a></li>
                 <d iv class="cart-box">
                     <i class="bx bx-cart-alt"></i>
                     <span id="cart-counter" class="cart-counter">0</span>
@@ -50,12 +64,12 @@
                 <div class="form-box">
                     <h4>- CONTACT US</h4>
                     <h3>Get Your <span>In Touched With us Today!</span></h3>
-                    <form method="post">
+                    <form>
                         <div class="name-and-email-box">
                             <div class="field">
                                 <label for="name">Your Name*</label>
                                 <div class="input-field">
-                                    <input type="text" placeholder="Ex.John Doe" required>
+                                    <input id="name" type="text" placeholder="Ex.John Doe" required>
                                     <i class="bx bx-user"></i>
                                 </div>
                             </div>
@@ -63,7 +77,7 @@
                             <div class="field">
                                 <label for="name">Email*</label>
                                 <div class="input-field">
-                                    <input type="email" placeholder="example@gmail.com" required>
+                                    <input id="email" type="email" placeholder="example@gmail.com" required>
                                     <i class="bx bx-envelope"></i>
                                 </div>
                             </div>
@@ -79,12 +93,12 @@
                             <div class="message-field">
                                 <label for="name">Your Message*</label>
                                 <div class="input-field">
-                                   <textarea name="message" id="message" placeholder="Message here"></textarea>
+                                   <textarea name="message" id="message" placeholder="Message here" required></textarea>
                                 </div>
                             </div>
                             <div class="sent-btn" id="sendBtn">
                                 <i class="bx bx-send-alt"></i>
-                                <button type="submit">Send Message</button>
+                                <button type="submit" onclick="sendMail()">Send Message</button>
                             </div>
     
                     </form>

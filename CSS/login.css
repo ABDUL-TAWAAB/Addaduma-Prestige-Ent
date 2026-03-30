@@ -14,6 +14,9 @@ body{
     justify-content: center;
     align-items: center;
     background: linear-gradient(#652410, #fac974);
+     @media screen and (max-width:1024px) {
+        align-items: unset;
+    }
 }
 .container{
     width: 75%;
@@ -22,6 +25,15 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: #ffffff;
+     @media screen and (max-width:1024px) {
+        margin-top: 30px;
+        width: 90%;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        flex-direction: column;
+    }
 }
 
 form{
@@ -30,6 +42,12 @@ form{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+     @media screen and (max-width:1024px) {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        flex-direction: column;
+    }
 
 }
 .logo{
@@ -43,19 +61,26 @@ form{
 
 form h1{
     font-size: 40px;
+     @media screen and (max-width:1024px) {
+        font-size: 26px;
+    }
 }
 
 .form-field{
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    width: 65%;
+    gap: 15px;
+    width: 80%;
     height: 50%;
+     @media screen and (max-width:1024px) {
+        gap: unset;
+    }
 }
 
 .section-box{
     width: 100%;
     padding: 10px;
+    align-self: center;
 }
 
 .input-box{
@@ -65,7 +90,18 @@ form h1{
     border: 1px solid;
     box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
     border-radius:8px;
+    padding: 0 8px;
+    @media screen and (max-width:1024px) {
+        width: 100%;
+    }
 }
+form p{
+    @media screen and (max-width:1024px) {
+       margin-top: 8px;
+    }
+}
+
+
 
 .message{
     margin-top: 5px;
@@ -74,6 +110,10 @@ form h1{
 label{
     font-size: 19px;
     font-weight: bold;
+     @media screen and (max-width:1024px) {
+        font-weight: normal;
+        font-size: 16px;
+    }
 }
 
 .input-box i{
@@ -88,9 +128,13 @@ label{
     width: 85%;
     height: 100%;
     padding: 10px;
-    border: none;
+    border:none;
+    border-radius: 8px;
     outline: none;
     font-size: 16px;
+     @media screen and (max-width:1024px) {
+        width: 100%;
+    }
 }
 
 button{
@@ -115,6 +159,9 @@ section{
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
+     @media screen and (max-width:1024px) {
+        display: none;
+    }
 }
 .top-caption{
     display: flex;
@@ -126,6 +173,7 @@ section{
 .top-caption p{
     width: 300px;
     text-align: right;
+     
 }
 
 .top-logo{
