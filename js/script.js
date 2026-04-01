@@ -1,8 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
 const product = [
     {
         id : 0,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: true 
@@ -10,7 +11,7 @@ const product = [
     {
         id : 1,
         name: "Can-fanta",
-        image: "../multimedia/products/can-fanta.jpg",
+        image: "multimedia/products/can-fanta.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -18,7 +19,7 @@ const product = [
     {
         id : 2,
         name: "Guinness Malta",
-        image: "../multimedia/products/bottled-malta-guinness.jpg",
+        image: "multimedia/products/bottled-malta-guinness.jpg",
         size: "500ml",
         price: 120,
         recomended: true 
@@ -26,7 +27,7 @@ const product = [
     {
         id : 4,
         name: "Monster Energy",
-        image: "../multimedia/products/can-monster-energy.jpg",
+        image: "multimedia/products/can-monster-energy.jpg",
         size: "350ml",
         price: 180,
         recomended: true 
@@ -34,7 +35,7 @@ const product = [
     {
         id : 4,
         name: "Sprite",
-        image: "../multimedia/products/can-sprite.jpg",
+        image: "multimedia/products/can-sprite.jpg",
         size: "350ml",
         price: 120,
         recomended: true 
@@ -42,7 +43,7 @@ const product = [
     {
         id : 5,
         name: "Coca-Cola",
-        image: "../multimedia/products/can-coca-cola.jpg",
+        image: "multimedia/products/can-coca-cola.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -50,7 +51,7 @@ const product = [
     {
         id : 6,
         name: "Fanta",
-        image: "../multimedia/products/fanta.jpg",
+        image: "multimedia/products/fanta.jpg",
         size: "500ml",
         price: 135,
         recomended: true 
@@ -58,7 +59,7 @@ const product = [
     {
         id : 7,
         name: "Smirnoff",
-        image: "../multimedia/products/smirnoff.jpg",
+        image: "multimedia/products/smirnoff.jpg",
         size: "350ml",
         price: 220,
         recomended: false
@@ -66,7 +67,7 @@ const product = [
     {
         id : 8,
         name: "Vittel Water",
-        image: "../multimedia/products/vittel-mineral-water.jpg",
+        image: "multimedia/products/vittel-mineral-water.jpg",
         size: "500ml",
         price: 50,
         recomended: true 
@@ -74,7 +75,7 @@ const product = [
     {
         id : 9,
         name: "Cola",
-        image: "../multimedia/products/coca-cola.jpg",
+        image: "multimedia/products/coca-cola.jpg",
         size: "250ml",
         price: 150,
         recomended: true 
@@ -82,7 +83,7 @@ const product = [
     {
         id : 10,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -90,7 +91,7 @@ const product = [
     {
         id : 11,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -98,7 +99,7 @@ const product = [
     {
         id : 12,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -106,7 +107,7 @@ const product = [
     {
         id : 13,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -114,7 +115,7 @@ const product = [
     {
         id : 14,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -122,7 +123,7 @@ const product = [
     {
         id : 15,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -130,7 +131,7 @@ const product = [
     {
         id : 16,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -138,7 +139,7 @@ const product = [
     {
         id : 17,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -146,7 +147,7 @@ const product = [
     {
         id : 18,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: false
@@ -154,7 +155,7 @@ const product = [
     {
         id : 19,
         name: "Can-Malt",
-        image: "../multimedia/products/can-malt.jpg",
+        image: "multimedia/products/can-malt.jpg",
         size: "250ml",
         price: 150,
         recomended: true
@@ -329,6 +330,9 @@ let currentUser = JSON.parse(localStorage.getItem('currentUser'));
             window.location.href = 'login.html';
         })
     }
+
+
+    });
 
 
 
