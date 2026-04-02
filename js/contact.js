@@ -6,9 +6,15 @@ let contactEl  = document.getElementById('contactEl');
 
 let currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if(currentUser){
-        loginEl.innerHTML = currentUser.name // show user name in login
+        loginEl.innerHTML = currentUser.name[0] // show user name in login
+         loginEl.style.width = "30px"
+        loginEl.style.height = "30px"
+        loginEl.style.alignContent = "center"
+        loginEl.style.textAlign = "center"
+        loginEl.style.backgroundColor = "green"
+        loginEl.style.borderRadius = "50%"
         profileIcon.style.display = "none" // disable the profile icon
-        loginEl.style.color = "red"
+        loginEl.style.color = "white"
     }else{
         
         loginEl.addEventListener('click', () => {
@@ -17,48 +23,25 @@ let currentUser = JSON.parse(localStorage.getItem('currentUser'));
     }
 
 
-  function sendMail() {
-    console.log("Start sending...");
-
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let message = document.getElementById('message').value;
-
-    console.log(name, email, message);
-
-    emailjs.send("service_6e1liye", "template_chywk9u", {
-        name: name,
-        email: email,
-        message: message
+// toogle functionality for conatct page
+    const menuBar = document.getElementById('menuBar');
+    const menuList = document.getElementById('navLinks')
+    const listItems = document.querySelectorAll ('#navLinks li a, .cart-box i');
+    menuBar.addEventListener('click', () => {
+        menuList.classList.toggle('show');
     })
-    .then(function(response) {
-        console.log("SUCCESS!", response);
-        alert("Message sent");
+
+    listItems.forEach(list => {
+        list.addEventListener('click', () => {
+            menuList.classList.remove('show');
+        })
     })
-    .catch(function(error) {
-        console.error("FAILED...", error);
-        alert("Failed to send");
-    });
-} 
+
+    // add copy write to page
+    let currentYear = new Date().getFullYear()
+    const cwyBox = document.querySelector("#currentYear");
+    cwyBox.textContent += currentYear //display current year
 
 
 
-
-
-// toogle bar
-//navigation functionality
-const menuBar = document.getElementById('menuBar')
-const navLinks = document.querySelector('#navLinks')
-const navitems = document.querySelectorAll('#navLinks li a, #navLinks i')
-
-//toggle the menu
-menuBar.addEventListener('click', () => {
-    navLinks.classList.toggle("show");
-});
-
-//close menu when menu list is clicked
-navitems.forEach((item) => {
-    item.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-    })
-} );
+  

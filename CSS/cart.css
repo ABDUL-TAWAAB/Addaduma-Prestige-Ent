@@ -175,6 +175,58 @@ main .contact-us-hero-box{
 }
 
 
+.carts-box{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    @media screen and (max-width:1024px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.cart-container{
+    height: 100%;
+    width: 70%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    @media screen and (max-width:1024px) {
+        width: 100%;
+    }
+}
+
+
+.cart-container .cart-div{
+    width: 100%;
+    display: flex;
+    border: 1px solid;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+.cart-div img{
+    width: 150px;
+}
+
+.cart-decription{
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+}
+
+#delete-icon{
+    color: red;
+    font-size: 25px;
+}
 
 
 

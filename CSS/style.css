@@ -8,10 +8,12 @@
 body{
     width: 100%;
     margin-top: 60px;
+    background-color: #f8ecec;
 }
 header{
     width:100%;
     background-color: #ffffff;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
     position:fixed;
     top: 0;
     left: 0;
@@ -101,7 +103,6 @@ nav ul li a, .logins a{
     text-decoration: none;
     font-size: 20px;
     color: #000000;
-   
 }
 
 nav ul li a:hover{
@@ -111,13 +112,21 @@ nav ul li a:hover{
 
 .logins a{
      @media screen and (max-width:768px) {
-     display: none;  
+     display: flex;
+     justify-content: center;
+     align-items: center; 
     }
 }
 
 nav ul i, nav .logins i{
     font-size: 25px;
     cursor: pointer;
+}
+
+.logout-icon{
+    @media screen and (max-width:1024px) {
+        font-size: 10px;
+    }
 }
 .cart-box{
     display: flex;
@@ -194,6 +203,9 @@ nav ul span{
 
 .search-box i{
     font-size: 25px;
+}
+main{
+    width: 100%;
 }
 
 
@@ -297,6 +309,8 @@ nav ul span{
 }
 
 .recomendations-page{
+    width: auto;
+    border: 1px solid;
     margin-top: 25px;
     padding:0 20px 0 20px;
     display: flex;
@@ -312,7 +326,7 @@ nav ul span{
 }
 
 .recomended-card{
-    width: 200px;
+    width: 500px;
    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
      border-radius: 8px;
 
@@ -342,11 +356,9 @@ nav ul span{
 }
 
 .product-card .product-details, .recomended-card .product-details{
-    background-color: #fac974;
     padding: 10px;
     height: fit-content;
     @media screen and (max-width:1024px) {
-        background-color: unset;
         display: flex;
         flex-direction: column;
         justify-content: center;

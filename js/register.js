@@ -98,7 +98,7 @@ form.addEventListener('submit', (e)=> {
     setTimeout(() =>  {
         window.location.href = 'index.html'
         
-    }, 2500)
+    }, 2000)
 })
 
 
