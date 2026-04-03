@@ -177,6 +177,12 @@ main .contact-us-hero-box{
     color: white;
 }
 
+.contact-us-hero-box p a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
 .contact-us-hero-box p span{
     color: yellow;
 }

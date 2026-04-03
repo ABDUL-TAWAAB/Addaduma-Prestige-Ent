@@ -329,26 +329,41 @@ main{
 }
 
 .recomendations-page{
-    width: auto;
-    border: 1px solid;
-    margin-top: 25px;
-    padding:0 20px 0 20px;
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    align-items: center;
-    gap: 20px;
+     display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .recomendation-container{
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.viewpoint {
+    overflow: hidden; 
+    width: 100%;
+}
+
+#backBtn, #nextBtn{
+    font-size: 40px;
+}
+#backBtn:hover, #nextBtn:hover{
+    color: #652410;
+    transition: 0.5s ease;
+}
+.recomendations-page::-webkit-scrollbar {
+    display: none;
 }
 
 .recomended-card{
-    width: 500px;
-   box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
-     border-radius: 8px;
+    width: 20%;
+    flex-shrink: 0;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    @media screen and (max-width:1024px) {
+        width: 50%;
+    }
 
 }
 .product-card{

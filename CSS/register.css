@@ -101,6 +101,9 @@ body{
     border-radius: 8px;
     top: 20px;
     right: 10px;
+     @media screen and (max-width:1024px) {
+        width: 70%;
+    }
 }
  .message.showMessage{
     display: flex;
@@ -139,11 +142,15 @@ body{
         text-align: center;
         align-self: center;
         box-shadow: unset;
+        width: 100%;
     }
 }
 
 .box{
     padding: 10px;
+     @media screen and (max-width:1024px) {
+        width: 90%;
+    }
 }
 .box label{
    @media screen and (max-width:1024px) {

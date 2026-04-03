@@ -18,7 +18,7 @@ const product = [
     },
     {
         id : 2,
-        name: "Guinness Malta",
+        name: "Malta Guinness",
         image: "multimedia/products/bottled-malta-guinness.jpg",
         size: "500ml",
         price: 120,
@@ -66,8 +66,8 @@ const product = [
     },
     {
         id : 8,
-        name: "Vittel Water",
-        image: "multimedia/products/vittel-mineral-water.jpg",
+        name: "Hollabdia Drink",
+        image: "multimedia/products/hollandia-drink.jpeg",
         size: "500ml",
         price: 50,
         recomended: true 
@@ -159,7 +159,47 @@ const product = [
         size: "250ml",
         price: 350,
         recomended: true
-    }
+    },
+    {
+        id : 20,
+        name: "Alani Energy",
+        image: "multimedia/products/Alani-Energy.jpeg",
+        size: "250ml",
+        price: 350,
+        recomended: false
+    },
+    {
+        id : 21,
+        name: "Aqua Drink",
+        image: "multimedia/products/Aqua-Drink.jpeg",
+        size: "250ml",
+        price: 350,
+        recomended: true
+    },
+    {
+        id : 22,
+        name: "Red Bull",
+        image: "multimedia/products/Red-bull.jpeg",
+        size: "250ml",
+        price: 350,
+        recomended: true
+    },
+    {
+        id : 23,
+        name: "Verna Water",
+        image: "multimedia/products/verna.jpg",
+        size: "250ml",
+        price: 350,
+        recomended: true
+    },
+    {
+        id : 24,
+        name: "Super Energy",
+        image: "multimedia/products/super-energy.jpg",
+        size: "250ml",
+        price: 350,
+        recomended: false
+    },
 ]
 
 
@@ -233,9 +273,7 @@ productEl = product.map(data => {
             valueEl.value = quantity;
         })
 
-        //show notifucation of product addition
-        
-        
+        //show notifucation of product addition  
         card.querySelector('#addToCart').addEventListener('click', () => {
             let currentUser = JSON.parse(localStorage.getItem('currentUser'));
             let messageEl = document.querySelector('.message'); 
@@ -268,7 +306,6 @@ productEl = product.map(data => {
     })
 
     //cart functionality
-
     function addToCart(product, qty) {
     // get existing cart or start new
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -313,6 +350,16 @@ productEl = product.map(data => {
   })
  
 
+
+
+
+
+
+
+
+
+
+
 // filter recomended products
 const recomendationPage = document.querySelector('.recomendations-page');
 const recomendedProduct = product.filter(p => p.recomended)
@@ -335,14 +382,89 @@ recomendedProduct.forEach(recomendedItem => {
                     <input  min="1" class="qty-value" type="number" value="0" />
                     <button class="increase">+</button>
                 </div>
-                    <i class="bx bx-cart-alt"></i>
+                    <i id="addToCart" class="bx bx-cart-alt"></i>
             </div>
         </div>
     `;
 
     recomendationPage.append(recomendedCard);
+
+
+    const decreaseBtn = recomendedCard.querySelector(".decrease");
+    const increaseBtn = recomendedCard.querySelector(".increase");
+    let valueEl = recomendedCard.querySelector(".qty-value");
+    if(!decreaseBtn || !increaseBtn || !valueEl){
+        console.error("button or element not found")
+        return
+    }
+
+        increaseBtn.addEventListener('click', () => {
+            let quantity = parseInt(valueEl.value);
+            quantity++;
+            valueEl.value = quantity;
+        })
+
+        decreaseBtn.addEventListener('click', () => {
+            let quantity = parseInt(valueEl.value) || 0;
+            if(quantity > 1){
+                quantity--;
+            };
+            valueEl.value = quantity;
+        })
+
+        //show notifucation of product addition  
+        recomendedCard.querySelector('#addToCart').addEventListener('click', () => {
+            let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            let messageEl = document.querySelector('.message'); 
+            if(currentUser){
+            const currentQuantity = parseInt(valueEl.value) || 0;
+            if(currentQuantity > 0){
+            addToCart(recomendedItem, currentQuantity);
+
+                messageEl.innerHTML = `<h3> ${recomendedItem.name} added to cart </h3>`;
+                messageEl.classList.toggle('showMessage');
+                setTimeout(() => {
+                    messageEl.classList.remove('showMessage');
+                }, 1500)
+                valueEl.value = 0; // reset qauntity
+            }
+        }else{
+            messageEl.textContent = "Please Login to continue";
+            messageEl.classList.add('showMessage')
+            setTimeout(() => {
+                messageEl.classList.remove('showMessage')
+            }, 2500)
+            }
+        })//end card event
     
-})
+
+ const track = document.querySelector("#track");
+const cards = document.querySelectorAll(".recomended-card");
+
+let index = 0;
+const cardsPerView = 1;
+const totalCards = cards.length;
+
+document.getElementById("nextBtn").onclick = () => {
+    if (index < totalCards - cardsPerView) {
+        index += cardsPerView;
+        moveSlide();
+    }
+};
+
+document.getElementById("backBtn").onclick = () => {
+    if (index > 0) {
+        index -= cardsPerView;
+        moveSlide();
+    }
+};
+
+function moveSlide() {
+    const moveAmount = index * (50 / cardsPerView);
+    track.style.transform = `translateX(-${moveAmount}%)`;
+}
+    
+})// end of remondation filter
 
 
 
