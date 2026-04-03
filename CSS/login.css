@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#652410, #fac974);
+    background-color: white;
      @media screen and (max-width:1024px) {
         align-items: unset;
     }
@@ -25,6 +25,7 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: #ffffff;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.1);
      @media screen and (max-width:1024px) {
         margin-top: 30px;
         width: 90%;
@@ -59,6 +60,19 @@ form{
     width: 70px;
 }
 
+.back{
+    border: 2px solid;
+    align-self: flex-start;
+    margin-left: 10%;
+    padding:2px 8px;
+    border-radius: 8px;
+    text-decoration: none;
+@media screen and (max-width:1024px) {
+    margin-top: 15px;
+}
+
+}
+
 form h1{
     font-size: 40px;
      @media screen and (max-width:1024px) {
@@ -71,7 +85,6 @@ form h1{
     flex-direction: column;
     gap: 15px;
     width: 80%;
-    height: 50%;
      @media screen and (max-width:1024px) {
         gap: unset;
     }
@@ -88,7 +101,7 @@ form h1{
     justify-content: center;
     align-items: center;
     border: 1px solid;
-    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px rgba(0, 0, 0, 0.1);
     border-radius:8px;
     padding: 0 8px;
     @media screen and (max-width:1024px) {

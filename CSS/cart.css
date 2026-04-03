@@ -15,7 +15,11 @@ header{
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
     border-bottom:2px solidx #652410;
+     @media screen and (max-width:768px) {
+        padding: 0 10px 0 10px;
+    }
 }
 
 header nav{
@@ -27,7 +31,7 @@ header nav{
     border-bottom-left-radius:10px;
     border-bottom-right-radius: 10px;
     @media screen and(max-width:768px) {
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
 
@@ -77,6 +81,9 @@ nav ul{
         top: 70px;    
         display: flex;
         width: 100%;
+        border-bottom: 2px solid #652410;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
     nav ul li a{
@@ -185,6 +192,7 @@ main .contact-us-hero-box{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: unset;
     }
 }
 
@@ -198,6 +206,7 @@ main .contact-us-hero-box{
     flex-direction: column;
     @media screen and (max-width:1024px) {
         width: 100%;
+        align-items: center;
     }
 }
 
@@ -205,57 +214,167 @@ main .contact-us-hero-box{
 .cart-container .cart-div{
     width: 100%;
     display: flex;
-    border: 1px solid;
+    border-bottom: 1px solid;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 0 10px;
+    @media screen and (max-width:1024px) {
+        width: 90%;
+    }
 }
 
 .cart-div img{
-    width: 150px;
+    width: 100px;
+    height: 100px;
+}
+.cart-descripton-container{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width:1024px) {
+        width: 60%;
+    }
 }
 
 .cart-decription{
     display: flex;
-    width: 75%;
+    width: 90%;
     justify-content: space-between;
+    @media screen and (max-width:1024px) {
+        flex-direction: column;
+    }
 }
 
 #delete-icon{
     color: red;
     font-size: 25px;
+    @media screen and (Max-width:1024px) {
+         float: right;
+         font-size: 30px;
+    }
+}
+
+
+/* =========summary styling */
+.summary{
+    border: 1px solid;
+    height: 90%;
+    padding:15px;
+    border-radius: 8px;
+    box-shadow: rgb(0, 0, 0, 0.1);
+    @media screen and (max-width:1024px) {
+        width: 80%;
+        margin-top: 20px;
+        height: auto;
+        align-self: center;
+    }
+}
+.summary h1{
+    font-size: 25px;
+}
+
+.calcualtions-box{
+    padding-top: 15px;
+    height: 80%;
+}
+
+.calcualtions-box .items-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.items-box p{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.total-price-and-checkout-box{
+    border-top: 2px solid;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.totalPriceEl{
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalPriceEl p{
+    font-weight: bold;
+}
+
+.checkOutBtn{
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #652410;
+    color: white;
+    border: none;
+}
+
+.checkOutBtn:hover{
+    background-color: #ff4d4d;
+    transition: 0.5s ease;
 }
 
 
 
 
 
+/*==== Popup styling======*/
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
 
 
+.popup-box {
+  background: #fff;
+  height: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
 
 
+.popup-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
 
+.delete-icon{
+    font-size: 100px;
+    color: red;
+}
 
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
+.yes-btn {
+  background-color: #ff4d4d;
+  color: rgb(255, 255, 255);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.no-btn {
+  background-color: #ccc;
+}
+/* ======footer styling */
 
 footer{
     width: 100%;
@@ -267,14 +386,18 @@ footer{
     justify-content: center;
 }
 .join-us{
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #000000;
     padding: 50px;
     border-radius: 0 0 10px 10px;
-
+    @media screen and (max-width:1024px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .join-us .sub-box h1{
@@ -287,6 +410,15 @@ footer{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     padding-right: 50px;
+    @media screen and (max-width:1024px) {
+        justify-content: center;
+        padding: unset;
+        margin-top: 20px;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 200px;
+    }
 }
 
 .join-us .sub-box{
@@ -298,6 +430,9 @@ footer{
     width: 300px;
     height: auto;
     border-radius: 8px;
+    @media screen and (max-width:1024px) {
+        margin-top: 20px;
+    }
 }
 
 .join-us .sub-box .email-box{
@@ -326,7 +461,12 @@ footer{
     background-color: red;
 }
 .join-us .sub-box h1{
+    width: 100%;
     max-width: 300px;
+    @media screen and (max-width:1024px) {
+        width: 100%;
+        max-width: unset;
+    }
 }
 
 .useful-links .footer-logo{
@@ -337,6 +477,13 @@ footer{
     justify-content: center;
     display: flex;
     align-items: center;
+    @media screen and (max-width:1024px) {
+        width: 95%;
+        height: fit-content;
+        margin-bottom: 20px;
+        text-align: center;
+        flex-direction: column;
+    }
 }
 
 .useful-links{
@@ -346,6 +493,10 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+     @media screen and (max-width:1024px) {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .useful-links .links{
@@ -353,6 +504,10 @@ footer{
         flex-direction: column;
         align-items:flex-start;
         gap: 10px;
+        @media screen and (max-width:1024px) {
+        text-align: center;
+        align-items: center;
+    }
 }
 
 .links h1{

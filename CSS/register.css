@@ -78,7 +78,7 @@ body{
 }
 
 .form-container p{
-    display: none;
+    display: flex;
     @media screen and (max-width:1024px) {
         width: 100%;
         margin-top: 10px;
@@ -89,6 +89,22 @@ body{
        display: flex;
     }
 }
+
+.message{
+    display: none;
+    position: fixed;
+    width: 100%;
+    color:white ;
+    background-color: green;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    top: 20px;
+    right: 10px;
+}
+ .message.showMessage{
+    display: flex;
+} 
 
 .form-container form{
     width: 100%;

@@ -210,9 +210,6 @@ productEl = product.map(data => {
    
     });
 
-
-
-
  //cart quantity count functionality
     const decreaseBtn = card.querySelector(".decrease");
     const increaseBtn = card.querySelector(".increase");
@@ -236,15 +233,33 @@ productEl = product.map(data => {
             valueEl.value = quantity;
         })
 
-
+        //show notifucation of product addition
+        
+        
         card.querySelector('#addToCart').addEventListener('click', () => {
+            let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            let messageEl = document.querySelector('.message'); 
+            if(currentUser){
             const currentQuantity = parseInt(valueEl.value) || 0;
             if(currentQuantity > 0){
                 addToCart(data, currentQuantity);
+
+                messageEl.innerHTML = `<h3> ${data.name} added to cart </h3>`;
+                messageEl.classList.toggle('showMessage');
+                setTimeout(() => {
+                    messageEl.classList.remove('showMessage');
+                }, 1500)
                 valueEl.value = 0; // reset qauntity
             }
-        })
-
+        }else{
+            messageEl.textContent = "Please Login to continue";
+            messageEl.classList.add('showMessage')
+            setTimeout(() => {
+                messageEl.classList.remove('showMessage')
+            }, 2500)
+            }
+        })//end card event
+    
 
 
 

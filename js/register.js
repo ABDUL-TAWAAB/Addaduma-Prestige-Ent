@@ -56,26 +56,41 @@ form.addEventListener('submit', (e)=> {
 
     //password validation
     if(password !== confirmPassword){
-        message.innerHTML = "password did much, check and try again"
-        message.style.color = "red";
+        message.innerHTML = "Please check Your passwords"
+        message.style.fontSize = "16px"
+        message.classList.toggle('showMessage')
+         setTimeout(() => {
+        message.classList.remove('showMessage')
+        }, 2500)
         return;
     }
 
     //phone number validation
     //let length = 10
     if(phoneNumber.length < 10){
-        alert("invalid phone number")
+        message.textContent = "invalid phone number";
+        message.style.fontSize = "16px"
+        message.classList.toggle('showMessage')
+        setTimeout(() => {
+            message.classList.remove('showMessage')
+        }, 2500)
+        return;
     }
 
 
     // check if user exist
     let users = JSON.parse(localStorage.getItem('users')) || [];
     const existingUser = users.find(
-        (user) => users.email == email
+        (user) => user.email.toLowerCase().trim() == email.toLowerCase().trim()
     );
 
     if(existingUser){
-        alert("hello you you already exist");
+         message.textContent = "Account already exist Please login"
+         message.style.fontSize = "16px"
+         message.classList.toggle('showMessage')
+         setTimeout(() => {
+            message.classList.remove('showMessage');
+        }, 2500)
         return;
     }
 
@@ -94,11 +109,14 @@ form.addEventListener('submit', (e)=> {
     }
 
     form.reset();
-
+message.textContent = "Successful. redirecting.."
+message.style.fontSize = "16px"
+message.classList.toggle('showMessage')
     setTimeout(() =>  {
+        message.classList.remove("showMessage")
         window.location.href = 'index.html'
         
-    }, 2000)
+    }, 2500)
 })
 
 

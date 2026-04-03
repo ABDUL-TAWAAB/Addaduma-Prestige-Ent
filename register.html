@@ -15,14 +15,14 @@
 <body>
     <div class="container">
         <div class="welcome-message">
+            <p class="message"></p>
             <h1>Addaduma Ent.</h1>
             <img src="./multimedia/logo.png" loading="lazy" alt="logo here">
             <p>Adventure our new products with ease</p>
         </div>
         <div class="form-container">
             <h1>Register </h1>
-            <p>Please fill in the form to continue</p>
-            <form id="registerForm">
+            <form id="registerForm" method="post">
                 <div class="form-field">
                     <div class="box">
                         <label for="name">First Name:</label>
@@ -50,7 +50,7 @@
                     <div class="box">
                         <label for="name">Phone Number:</label>
                         <div class="field">
-                            <input type="number" maxlength="10" placeholder="1234567890" name="phoneNumber" id="phoneNumber" required>
+                            <input type="number" maxlength="10" placeholder="05 xxx xxxx" name="phoneNumber" id="phoneNumber" required>
                             <i class="bx bx-phone"></i>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                         <label for="name">Country::</label>
                         <div class="field">
                             <input type="text" placeholder="Country" name="Country" id="Country" required>
-                            <i class="bx bx-phone"></i>
+                            <!-- <i class="bx bx-phone"></i> -->
                         </div>
                     </div>
                 </div>
@@ -98,8 +98,7 @@
                     <button class="signUpBtn" id="signUpBtn" type="submit">Sign Up</button>
                 </div>
             </form>
-            <p>Already have an account? <a href="login.html">Login</a></p>
-            <p class="message"></p>
+            <p>Already have an account?<a href="login.html">Login</a></p>
         </div>
     </div>
 
