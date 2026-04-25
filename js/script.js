@@ -512,7 +512,6 @@ let currentUser = JSON.parse(localStorage.getItem('currentUser'));
             }, 1000)
         })
 
-
         logOutIcon.addEventListener('click', () => {
             localStorage.removeItem('currentUser');
             location.reload();

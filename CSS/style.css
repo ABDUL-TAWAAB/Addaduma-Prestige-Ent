@@ -32,6 +32,9 @@ header nav{
     padding:15px 20px 15px 20px;
     border-bottom-left-radius:10px;
     border-bottom-right-radius: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeDown 0.8s ease forwards;
     @media screen and(max-width:768px) {
         justify-content: space-around;
     }
@@ -43,12 +46,15 @@ header nav{
     justify-content: center;
     padding: 0;
     height: fit-content;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeDown 1s ease forwards;
 
 }
 nav .logo h1{
     color:rgb(32, 2, 2);
     @media screen and (max-width:768px) {
-     font-size: 28px;  
+     font-size: 22px;  
     }
 }
 
@@ -182,6 +188,7 @@ nav ul span{
     display: none;
     transform: translateX(-20px);
     transition: 0.3s ease-in-out;
+    z-index: 1000;
 }
 .message.showMessage{
     display: flex;
@@ -194,6 +201,9 @@ nav ul span{
     display: flex;
     justify-content: center;
     align-content: center ;
+    opacity: 0;
+    transform: translate(-20px);
+    animation: fadeDown 3s ease forwards;
 }
 
 .search-box{
@@ -248,6 +258,9 @@ main{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    opacity: 0;
+    transform: translate(-20px);
+    animation: fadeDown 3s ease forwards;
     @media screen and (max-width:768px) {
         width:100%;
         flex-direction: column;
@@ -370,12 +383,22 @@ main{
     width: 220px;
     box-shadow: 0 10px 6px rgba(1, 1, 0, 0.1);
     border-radius: 8px;
+    opacity: 0;
+    transform: translate(-20px);
+    animation: fadeDown 3s ease forwards;
     @media screen and (max-width:1024px) {
         width: 170px;
         height: 230px;
         padding: 5px 5px;
         margin-top: 20px;
     }
+}
+
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* move to normal position */
+  }
 }
 
 .product-card img, .recomended-card img{
