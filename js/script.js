@@ -353,13 +353,6 @@ productEl = product.map(data => {
 
 
 
-
-
-
-
-
-
-
 // filter recomended products
 const recomendationPage = document.querySelector('.recomendations-page');
 const recomendedProduct = product.filter(p => p.recomended)
